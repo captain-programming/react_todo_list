@@ -1,18 +1,12 @@
 import React from 'react'
-import { useState } from 'react'
-import styles from "./todo.module.css"
+import TodoItem from './TodoItem'
 
-const TodoList = ({todo, onDelete}) => {
-    const [isCompleted, setIsCompleted] = useState(todo.isCompleted);
-  return (
+
+const TodoList = ({todo}) => {
     
-    <div className={styles.list} key={todo.id}>
-            <div>{todo.value}</div>
-            <input type="radio" className={styles.radio} checked={isCompleted} onChange={(e) => {
-                setIsCompleted(e.target.checked);
-            }}/>
-            
-            {/* <button onClick={()=> onDelete(todo.id)}>Delete</button> */}
+  return (
+    <div>
+         <TodoItem todo={todo}/>
     </div>
   )
 }

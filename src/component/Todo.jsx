@@ -8,10 +8,10 @@ const Todo = () =>{
    const [todos, setTodos] = useState([]);
    
 
-   const onDelete = (id) =>{
-       let newTodos =todos.filter(todo => todo.id !== id);
-       setTodos(newTodos);
-   }
+  //  const onDelete = (id) =>{
+  //      let newTodos =todos.filter(todo => todo.id !== id);
+  //      setTodos(newTodos);
+  //  }
 
 //    const handleChange = (e)=> {
 //        setTodo(e.target.value);
@@ -21,7 +21,7 @@ const Todo = () =>{
             <div><h1>TodoList</h1></div> 
             <div>
                     {todos.map((todo) =>(
-                        <TodoList key={todo.id} todo={todo} onDelete={onDelete}/>
+                        <TodoList key={todo.id} todo={todo}/>
                     ))}
             </div>
             <div>
